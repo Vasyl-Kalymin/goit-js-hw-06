@@ -2,7 +2,7 @@ const inputValue = document.querySelector('input')
 const inputDataLength = Number(inputValue.dataset.length);
 
 function outputName({ currentTarget }) {
-    if (currentTarget.value.length === inputDataLength) {
+    if (currentTarget.value.trim().length === inputDataLength) {
         inputValue.classList.remove('invalid');
         inputValue.classList.add('valid');
     } else {
